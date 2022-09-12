@@ -1,0 +1,16 @@
+package com.attra.training;
+
+public class Ifelse {
+	public static void main(String[] args) {
+		
+	int d=420;
+	if(d) {
+		System.out.println("true");
+	}
+	else
+	{
+		System.out.println("false");
+	}
+	}
+
+}

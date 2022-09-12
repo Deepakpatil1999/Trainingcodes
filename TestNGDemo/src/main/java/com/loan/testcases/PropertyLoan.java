@@ -1,0 +1,27 @@
+package com.loan.testcases;
+
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class PropertyLoan {
+	@Test(groups= {"Smoke"})
+	public void webPagePropertyLoan()
+	{
+		System.out.println("Web page Property loan");
+	}
+	@Parameters("URL")
+	@Test
+	public void mobilePagePropertyLoan(String URL)
+	{
+		System.out.println("mobile page Property loan");
+		System.out.println(URL);
+	}
+	@Parameters("Name")
+	@Test
+	public void apiPagePropertyLoan(String dp)
+	{
+		System.out.println("api Page Property loan");
+		System.out.println(dp);
+	}
+
+}

@@ -1,0 +1,49 @@
+package Seleniumtraining;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Alerts {
+	
+	
+	//button[@name="alertbox"]
+	//button[@name="confirmalertbox"]
+	//button[@name="promptalertbox1234"]
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\deepak.patil\\Downloads\\chromedriver_win32\\chromedriver.exe");
+
+		// Start Edge Session
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://nxtgenaiacademy.com/alertandpopup/");
+		driver.manage().window().maximize();
+		
+		
+		driver.findElement(By.xpath("//button[@name=\"alertbox\"]")).click();
+		 driver.switchTo().alert().accept();
+		 
+		 driver.findElement(By.xpath("//button[@name=\"confirmalertbox\"]")).click();
+		 driver.switchTo().alert().dismiss();
+		 
+		// Alert al= driver.switchTo().alert();
+		 
+		driver.findElement(By.xpath("//button[@name=\"promptalertbox1234\"]")).click();
+		 org.openqa.selenium.Alert al= driver.switchTo().alert();
+		 Thread.sleep(2000);
+		 al.sendKeys("deepak");
+		 Thread.sleep(2000);
+		 al.accept();
+		
+		//driver.switchTo().alert().sendKeys("deepak");
+		 
+		 
+		 
+		 
+		
+	}
+	
+
+}

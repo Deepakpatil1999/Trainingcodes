@@ -1,0 +1,12 @@
+/*
+ * package com.attra.assignments;
+ * 
+ * public class Largestnumber1 { public static void main(String[] args) {
+ * 
+ * 
+ * int a = 5, b = 10, c = 20; if(a>b && b>c) {
+ * System.out.println("Then a is the largest number" + c); } elseif(b>a && b>c)
+ * { System.out.println("Then a is the largest number " + a); } else
+ * 
+ * } }
+ */

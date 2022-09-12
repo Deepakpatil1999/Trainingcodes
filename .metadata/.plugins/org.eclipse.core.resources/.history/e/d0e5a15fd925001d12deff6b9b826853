@@ -1,0 +1,33 @@
+package com.attra.assignments;
+
+public class AdvancedCalculator extends Calculator {
+	public void modulus() {
+		int mod=a/b;
+		System.out.println("Modalus of number : " + mod);
+		
+	}
+	public void square() {
+		int sq=a*a;
+		System.out.println("Square of number : " + sq);
+		
+	}
+	public void squareroot () {
+		double root;
+		root=Math.sqrt(b);
+	
+		
+		System.out.println("Squareroot of number : " + root);
+		
+	}
+	
+public static void main(String[] args) {
+	AdvancedCalculator ac=new AdvancedCalculator();
+	ac.addition();
+	ac.subtraction();
+	ac.multplication();
+	ac.division();
+	ac.modulus();
+	ac.square();
+	ac.squareroot();
+}
+}

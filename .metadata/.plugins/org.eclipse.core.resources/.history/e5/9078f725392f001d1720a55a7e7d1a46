@@ -1,0 +1,30 @@
+package Seleniumtraining;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class AmazonWeb {
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.edge.driver",
+				"C:\\Users\\deepak.patil\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+
+		// Start Edge Session
+		WebDriver driver = new EdgeDriver();
+
+		
+		driver.get("https://www.amazon.in/s?k=amazon+com&hvadid=73048880413275&hvbmt=be&hvdev=c&hvqmt=e&tag=msndeskstdin-21&ref=pd_sl_4cc5demh34_e");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+		driver.findElement(By.id("twotabsearchtextbox")).clear();
+		
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Water purifier");
+		
+
+	
+
+}

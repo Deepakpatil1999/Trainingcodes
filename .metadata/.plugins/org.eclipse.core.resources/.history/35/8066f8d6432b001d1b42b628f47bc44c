@@ -1,0 +1,21 @@
+package com.loan.testcases;
+
+import org.testng.annotations.Test;
+
+public class EducationalLoan {
+	@Test
+	public void webPageEducationalLoan()
+	{
+		System.out.println("webPageEducationalLoan");
+	}
+	@Test
+	public void mobilePageEducationalLoan()
+	{
+		System.out.println("mobilePageEducationalLoan");
+	}
+	@Test
+	public void apiPagewebPageEducationalLoan()
+	{
+		System.out.println("apiPagewebPageEducationalLoan");
+	}
+}

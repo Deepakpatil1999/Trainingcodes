@@ -1,0 +1,55 @@
+package com.zoho.testcases;
+
+import java.io.IOException;
+import java.time.Duration;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import com.zoho.pages.AppPage;
+import com.zoho.pages.HomePage;
+import com.zoho.pages.LoginPage;
+
+
+
+
+
+
+
+public class SampleTestCases1 {
+	public static Logger log = LogManager.getLogger(SampleTestCases1.class.getName());
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+
+		System.setProperty("webdriver.edge.driver",
+				"C:\\Users\\deepak.patil\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+
+		// Start Edge Session
+		WebDriver driver = new EdgeDriver();
+
+		driver.get("https://www.zoho.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+		Thread.sleep(2000);
+		
+		log.info("Logger message");
+		log.error("Error message");
+		log.debug("Debug message");
+		log.fatal("Fatal message");
+
+		HomePage homepage = new HomePage(driver);
+
+		LoginPage loginpage = homepage.gotSignin();
+		Excel e=new Excel();
+		
+		AppPage apppage = loginpage.login(e.getData().get(1), e.getData().get(2));
+		//AppPage apppage = loginpage.login("deepaknpatil121@gmail.com", "dnpm1999");
+
+		apppage.clickonCRM();
+
+	}
+
+}

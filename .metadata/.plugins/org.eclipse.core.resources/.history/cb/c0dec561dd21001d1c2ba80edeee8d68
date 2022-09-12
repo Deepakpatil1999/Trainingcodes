@@ -1,0 +1,13 @@
+package Exceptions;
+
+public class ArrayIndexOutOfBoundsException {
+	public static void main(String[] args) {
+		try {
+			int a[] =new int[5];
+			a[6]=9;
+		} catch (ArrayIndexOutOfBoundsExceptions e) {
+			System.out.println("cannnot divide");
+		}
+	}
+
+}

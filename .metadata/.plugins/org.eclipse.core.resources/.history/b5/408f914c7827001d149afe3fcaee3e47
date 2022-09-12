@@ -1,0 +1,26 @@
+package Seleniumtraining;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Seleniumdemo {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\deepak.patil\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+		 
+		// Start Edge Session
+		WebDriver driver = new EdgeDriver();
+		 
+		driver.get("https://intranet.attra.com/intranet/");
+		driver.manage().window().maximize();
+		driver.findElement(By.name("txtuser")).sendKeys("deepak.patil@attra.com.au");
+		
+		driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("Welcome@1008");
+		driver.findElement(By.xpath("//span[@class=\"checkmark\"]")).click();
+		//driver.findElement(By.xpath("//div[@class=\"recaptcha-checkbox-border\"]")).click();
+		driver.findElement(By.id("google-authentic")).click();
+		 
+		//driver.quit();
+	}
+
+}

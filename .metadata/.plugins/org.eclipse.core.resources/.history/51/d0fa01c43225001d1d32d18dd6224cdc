@@ -1,0 +1,18 @@
+package com.attra.assignments;
+
+public class AdvancedCalculator extends Calculator {
+	public void modulus() {
+		
+	}
+	public void square() {
+		
+	}
+	public void squareroot () {
+		
+	}
+	
+public static void main(String[] args) {
+	AdvancedCalculator ac=new AdvancedCalculator();
+	
+}
+}

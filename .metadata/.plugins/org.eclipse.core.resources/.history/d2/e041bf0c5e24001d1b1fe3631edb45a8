@@ -1,0 +1,18 @@
+package com.attra.threads;
+
+public class Workable implements Runnable {
+	public void run()
+	{
+		System.out.println("task is executed");
+	
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch(InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

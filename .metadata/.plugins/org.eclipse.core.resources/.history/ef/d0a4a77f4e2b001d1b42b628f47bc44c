@@ -1,0 +1,22 @@
+package com.loan.testcases;
+
+import org.testng.annotations.Test;
+
+public class PropertyLoan {
+	@Test
+	public void webPagePropertyLoan()
+	{
+		System.out.println("Web page Property loan");
+	}
+	@Test
+	public void mobilePagePropertyLoan()
+	{
+		System.out.println("mobile page Property loan");
+	}
+	@Test
+	public void apiPagePropertyLoan()
+	{
+		System.out.println("api Page Property loan");
+	}
+
+}

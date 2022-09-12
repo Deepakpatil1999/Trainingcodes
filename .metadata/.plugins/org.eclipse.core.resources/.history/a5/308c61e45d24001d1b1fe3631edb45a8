@@ -1,0 +1,24 @@
+package com.attra.threads;
+
+public class Threadpool extends Thread {
+	
+	public void run()
+	{
+		System.out.println("task is executed");
+		sendSMS();
+	}
+	private void sendSMS()
+	{
+		System.out.println("sending sms");
+		try
+		{
+			Thread.sleep(1000);
+		}
+		catch(InterruptedException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+
+}

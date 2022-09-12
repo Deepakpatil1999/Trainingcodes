@@ -1,0 +1,37 @@
+package com.swaglabs.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class SwagLabInventoryPage {
+	WebDriver driver;
+
+	public SwagLabInventoryPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+
+	}
+
+	@FindBy(id = "add-to-cart-sauce-labs-backpack")
+	WebElement clickaddtocart1;
+
+	@FindBy(id = "add-to-cart-sauce-labs-bike-light")
+	WebElement clickaddtocart2;
+
+	@FindBy(xpath = "//a[@class='shopping_cart_link']")
+	WebElement clickaddtocart;
+
+	public void clickOnAddtocart1() {
+		clickaddtocart1.click();
+		clickaddtocart2.click();
+		clickaddtocart.click();
+	}
+	/*
+	 * public void clickOnAddtocart2() { clickaddtocart2.click(); }
+	 * 
+	 * public void clickOnAddtocart() { clickaddtocart.click(); }
+	 */
+
+}

@@ -1,0 +1,22 @@
+package com.loan.testcases;
+
+import org.testng.annotations.Test;
+
+public class HomeLoan {
+	@Test
+	public void webPage()
+	{
+		System.out.println("Webpage car loan");
+	}
+	@Test
+	public void mobilePageCarLoan()
+	{
+		System.out.println("mobilePageCarLoan car loan");
+	}
+	@Test
+	public void apiCarLoan()
+	{
+		System.out.println("apiCarLoan car loan");
+	}
+
+}

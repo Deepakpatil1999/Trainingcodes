@@ -1,0 +1,11 @@
+package com.attra.assignments;
+
+public class Splitstring {
+
+	public static void main(String[] args) {
+		String org = "organization";
+		String[] split=  org.split("-");
+		
+		
+	}
+}

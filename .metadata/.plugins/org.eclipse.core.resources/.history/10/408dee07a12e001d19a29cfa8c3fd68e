@@ -1,0 +1,9 @@
+package Testing;
+
+public class String1 {
+	public static void main(String1[] args) {
+		String1  s1 = "deepak";
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.attra.assignments;
+
+public interface Shape {
+	public default void getArea(int a) {
+		int r=4, x=4,y=4;
+		double pi=3.14, Area,square; 
+		Area =pi*r*r;
+		square=x*y;
+		
+		//System.out.println(Area);
+		
+	}
+	
+	public class Circle implements Shape{
+		public  void areaofcircle(int r,double pi )
+		{
+			System.out.println(pi*r*r);
+		}
+	}
+	public class Square implements Shape{
+		public void areaofsquare(int x, int y)
+		{
+			System.out.println(x*y);	
+		}
+	}
+	public class runner
+	{
+		
+	
+	public static void main(String[] args) {
+		Circle c=new Circle();
+		Square s=new Square();
+		c.areaofcircle(8, 3.14);
+		s.areaofsquare(5, 5);
+		
+	}
+}
+
+}

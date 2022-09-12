@@ -1,0 +1,37 @@
+package Seleniumtraining;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Searchselenium {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver",
+				"C:\\Users\\deepak.patil\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+
+		// Start Edge Session
+		WebDriver driver = new EdgeDriver();
+
+		driver.get("https://www.google.co.in/webhp");
+		driver.manage().window().maximize();
+		WebElement element=driver.findElement(By.xpath("//input[@class=\"gLFyf gsfi\"]"));
+		element.sendKeys("Selenium");
+		//element.click();
+		//driver.findElement(By.xpath("//input[@data-ved=\"0ahUKEwjvmNDG2ev5AhWrIaYKHbdSD0cQ4dUDCAc\"]")).click();
+		// element.click();
+		
+
+		List<WebElement>  dynamicelement= driver.findElements(By.xpath("//span[text()='selenium']"));
+		for(int i=0; i<dynamicelement.size(); i++)
+		{
+			String element1 =dynamicelement.get(i).getText();
+			if(element1.equalsIgnoreCase("selenium")) {
+			dynamicelement.get(i).click();
+		}
+	}
+
+}
+}
